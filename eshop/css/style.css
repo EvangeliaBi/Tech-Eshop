@@ -1,0 +1,28 @@
+/*CSS που εφαρμόζεται πάνω στις κάρτες προϊόντων.*/
+.product-card {
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+  height: 200px; /*Ορίζει σταθερό ύψος για όλες τις εικόνες*/
+  object-fit: cover; /*Κάνει την εικόνα να γεμίζει το πλαίσιο, κόβοντας τμήματα αν χρειαστεί αλλά διατηρώντας την αναλογία */
+  border-top-left-radius: 0.75rem; /*Στρογγυλεύει τις πάνω γωνίες της εικόνας ώστε να ταιριάζουν με το στυλ της κάρτας.*/
+  border-top-right-radius: 0.75rem;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+
+.card-text {
+  /*Εξασφαλίζει ότι όλες οι κάρτες έχουν τουλάχιστον 60px χώρο για κείμενο, διατηρώντας ομοιόμορφη διάταξη σε πλέγμα/λίστα προϊόντων. Αυτό αποτρέπει «σπασίματα» στο layout όταν κάποιες περιγραφές είναι πιο σύντομες.*/
+  min-height: 60px;
+}
